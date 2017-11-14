@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Connect with SoundCloud</title>
+    <!--<script src="http://34.203.219.137/g9/authenticate.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+   <script src="https://connect.soundcloud.com/sdk/sdk-3.2.2.js"></script>
+    <script src="scWidget.js"></script>
+    <style>
+        .footer {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           background-color: red;
+           color: white;
+           text-align: center;
+        }
+    </style>
+  </head>
+ 
+ <body>
+    <button id = "currentTrackController" name = "0" onclick = currentTrackController()>Play/Pause</button>
+    <button id = "nextOnQueue" onclick = playQueue()> Play Next On Queue</button>
+    
+    <!--<div class="playpause">
+    <H1 id = "currentTrackController">Play/Pause</h1>
+    </div>
+    
+    <div class = "queue"> 
+    <p id = "nextOnQueue"> Play Next On Queue</p>
+    </div>-->
+    
+    <br>
+    
+    <div class = "search"> 
+    <input type = "text" id="search"></input>
+    <input type = "button" id="btnSearch">search</input>
+    </div>
+    
+        <ul id="results">
+            
+        </ul>
+        <div class="footer">
+            <p>Currently Playing</p>
+        </div>
+    </body>
+
+  
+</html>

@@ -1,0 +1,23 @@
+<html>
+<input type="text" id="search">
+<button onclick=myFunction()>search</button>
+<script type="text/javascript">
+     function myFunction(){
+            var query = document.getElementById("search").value();
+            var token = "BQCpqcjJIu9vJFLu7s-uWHTSoPdEk91QtNGwVrxUOTpFQTS_dJ7z3z2xHgkMarNyOHxta-pm68JA4wIfqDITQ0g7dTL-2z_WlB_9APeGzswI4hx2EAkXc2k2VSGAg8ekRqI0c7-F9im0D2hNyg";
+            var url = "https://api.spotify.com/v1/search?q="+query+"&type=track,artist&market=US";
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", url, true);
+            xmlHttp.addEventListener("load", getEventCallback, false);
+            xmlHttp.send(null);
+            console.log("sent?");
+        }
+     function getEventCallback(event){
+        var jsonData = JSON.parse(event.target.responseText);
+ 
+	//var jsonData = event.target.responseText;
+    
+         console.log("json data: " +  jsonData);
+     }
+</script>
+</html>

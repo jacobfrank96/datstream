@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin:30 px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    /*height: 300px; /* Should be removed. Only for demonstration */*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ 
+      .footer {
+          height:24px; // Replace with the height your footer should be
+          width: 100%; // Don't change
+          background-image: none;
+          background-repeat: repeat;
+          background-attachment: scroll;
+          background-position: 0% 0%;
+          position: fixed;
+          bottom: 0pt;
+          left: 0pt;
+          padding-bottom: 70px
+      
+      }   
+      
+    .footer_contents {
+          height:24px; // Replace with the height your footer should be
+          width: 1000px; // Visible width of footer
+          margin:auto;
+    }
+</style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.2.2.js"></script>
+    <script src = "soundcloudScript.js"></script>
+    <script src = "spotifyScript.js" type="text/javascript"></script>
+     <!-- Bootstrap -->
+    <link href="/g9/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/g9/front_style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    
+   
+    
+</head>
+
+<body>
+
+<!--<div class = "search"> -->
+        <input type = "text" id="search"></input>
+        <input type = "button" id="btnSearch" value = "search"></input>
+<!--</div>-->
+    
+<div class="row">
+    
+    
+    
+  <div class="column"  style="background-color:#bbb;" >
+    <h1>Sound Cloud</h1>
+    
+    <div class = "results" id = "soundcloudResults">
+        <ul></ul>
+    </div>
+
+  </div>      
+    
+  <div class="column" style="background-color:#aaa;">
+    <h1>Spotify</h1>
+    <!-- <ul id="spotifyResults">-->
+    <!--        -->
+    <!--</ul>-->
+    <div class = "results" id = "spotifyResults">
+        <ul></ul>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+</div>
+
+
+ <div class="footer">
+            <div class="footer_contents">
+                 <div id = "currTrack"></div>
+                 
+                 <button id="playQueue">
+                    <span class="ui-button-text">Play</span>
+                </button>
+                 
+            </div>
+        </div>
+
+</body>
+</html>
